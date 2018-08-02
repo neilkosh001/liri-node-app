@@ -8,6 +8,8 @@ var getMyTweets = function (){
 
  
 var client = new Twitter(keys.twitterKeys);
+var spotify = new Spotify(keys.spotify);
+
 
  
 var params = {screen_name: '_angrbrd'};
@@ -27,16 +29,16 @@ console.log(tweets[i].text);
 }
 
 
-// spotify.search({ type: 'track', query: 'dancing in the moonlight' }, 
-// function(err, data) {
-//   if ( err ) {
-//       console.log('Error occurred: ' + err);
-//       return;
-//   }
+spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function(err, data) {
+  if ( err ) {
+      console.log('Error occurred: ' + err);
+      return;
+  }
 
-// console.log(data);
-  
-// });
+console.log(data);
+
+});
+
 
 var pick = function (caseData, functionData){
   switch(caseData) {

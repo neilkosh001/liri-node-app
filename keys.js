@@ -8,7 +8,14 @@ exports.twitterKeys = {
 }
 
 
+var spotifyKeys = {
+	id: "5a8fdf523e5647c88795f0e6d5f530cf",
+	secret: "9bd02873e1a845e6b828a45bf9e6a943"
+}
 
 
-
+module.exports = {
+	twitterKeys: twitterKeys,
+	spotifyKeys: spotifyKeys
+}
 
