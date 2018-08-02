@@ -6,7 +6,6 @@ var spotify = require('spotify');
 
 var getMyTweets = function (){
 
-
  
 var client = new Twitter(keys.twitterKeys);
 
@@ -25,17 +24,19 @@ console.log(tweets[i].text);
   }
 });
 
+}
 
 
-spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function(err, data) {
-  if ( err ) {
-      console.log('Error occurred: ' + err);
-      return;
+// spotify.search({ type: 'track', query: 'dancing in the moonlight' }, 
+// function(err, data) {
+//   if ( err ) {
+//       console.log('Error occurred: ' + err);
+//       return;
+//   }
+
+// console.log(data);
   
-
-console.log(data);
-  }
-});
+// });
 
 var pick = function (caseData, functionData){
   switch(caseData) {
@@ -46,12 +47,12 @@ var pick = function (caseData, functionData){
     console.log('LIRI does not know that');
     }
   }
-}
+
 
 var runThis = function(argOne, argTwo) {
-  pick(argOne. argTwo);
-}
+  pick(argOne , argTwo);
+};
 
-runThis(process.argv[2].process.argv[3]);
+runThis(process.argv[2], process.argv[3]);
       
   
